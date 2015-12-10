@@ -4,7 +4,8 @@ module RedditPostClassifierBot
   class RedditTrainer < ::RedditKit::Client
     REDDIT_URL = "https://www.reddit.com"
     CLASSES = {
-      front: "/",
+      hot: "/",
+      new_post: "/new/",
       rising: "/rising/",
       controversial: "/controversial/",
       top_hour: "/top/",

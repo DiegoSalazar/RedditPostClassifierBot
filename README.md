@@ -1,8 +1,6 @@
 # RedditPostClassifierBot
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/RedditPostClassifierBot`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem wraps the Ruby [nbayes](https://github.com/oasic/nbayes) gem to run text classification on Reddit posts. It fetches posts from the front, controversial, top pages and bad posts and classifies them according to what page they were found on or if it was just bad (negative or zero votes). Once trained, it can be used to try and predict if a new post is frontpage material, or looks as such. It is not however, responsible for your karma whoring.
 
 ## Installation
 

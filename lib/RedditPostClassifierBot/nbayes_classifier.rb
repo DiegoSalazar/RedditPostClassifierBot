@@ -1,6 +1,6 @@
 module RedditPostClassifierBot
   class NBayesClassifier
-    NBAYES_FILE = "./RPCB-nbayes.yml"
+    NBAYES_FILE = ENV.fetch "NBAYES_FILE_PATH", "./RPCB-nbayes.yml"
 
     def initialize
       @nbayes = NBayes::Base.new
