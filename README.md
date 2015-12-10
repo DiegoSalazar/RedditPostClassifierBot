@@ -61,9 +61,9 @@ trainer = RedditPostClassifierBot::RedditTrainer.new trials, per_page, debug?
 ```
 
 Arguments:
- - `trials` is an integer specify how many pages to paginate to. Default: 10
+ - `trials` is an integer to specify how many pages to paginate to. Default: 10
  - `per_page` is how many posts to fetch from each page. Default: 200
- - `debug` toggles `puts`ing out what page it's currently classifying.
+ - `debug` toggles `puts`ing out what page it's currently classifying. Default: true
 
 You can also customize what classes i.e. pages and/or subreddits, the trainer will use for classification by modifying the `RedditPostClassifierBot::RedditTrainer::CLASSES` hash where the keys are the classifications and the values are the relative path to the page to fetch from.
 
