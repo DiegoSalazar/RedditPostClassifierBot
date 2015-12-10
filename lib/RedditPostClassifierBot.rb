@@ -3,7 +3,6 @@ require "nbayes"
 require "RedditPostClassifierBot/version"
 require "RedditPostClassifierBot/nbayes_classifier"
 require "RedditPostClassifierBot/reddit_trainer"
-require "RedditPostClassifierBot/good_post_finder"
 
 module RedditPostClassifierBot
   def self.classifier
