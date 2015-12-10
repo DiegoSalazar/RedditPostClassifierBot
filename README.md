@@ -59,6 +59,7 @@ Further training customization can be done by instantiating `RedditTrainer` dire
 ```ruby
 trainer = RedditPostClassifierBot::RedditTrainer.new trials, per_page, debug?
 trainer.train
+trainer.dump # saves state to a yml file
 ```
 
 Arguments:
