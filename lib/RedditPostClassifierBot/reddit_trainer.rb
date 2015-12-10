@@ -1,7 +1,5 @@
-require "redditkit"
-
 module RedditPostClassifierBot
-  class RedditTrainer < ::RedditKit::Client
+  class RedditTrainer
     REDDIT_URL = "https://www.reddit.com"
     CLASSES = {
       hot: "/",
@@ -16,6 +14,10 @@ module RedditPostClassifierBot
     }
 
     attr_reader :classifications
+
+    def self.trained_on
+      CLASSES.KEYS
+    end
 
     def initialize(trials = 10, per_page = 200, debug = true)
       @max_trials, @per_page, @debug = trials, per_page, debug
