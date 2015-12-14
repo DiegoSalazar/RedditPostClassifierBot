@@ -3,7 +3,7 @@ module RedditPostClassifierBot
     REDDIT_URL = "https://www.reddit.com"
     CLASSES = {
       hot: "/",
-      new_post: "/new/",
+      "new" => "/new/",
       rising: "/rising/",
       controversial: "/controversial/",
       top_hour: "/top/",
