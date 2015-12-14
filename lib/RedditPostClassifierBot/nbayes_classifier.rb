@@ -2,6 +2,10 @@ module RedditPostClassifierBot
   class NBayesClassifier
     NBAYES_FILE = ENV.fetch "NBAYES_FILE_PATH", "./RPCB-nbayes.yml"
 
+    def self.trained?
+      File.exists?(NBAYES_FILE) && File.read(NBAYES_FILE).chomp.size > 100
+    end
+
     def initialize
       @nbayes = NBayes::Base.new
     end

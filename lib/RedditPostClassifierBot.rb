@@ -16,4 +16,8 @@ module RedditPostClassifierBot
   def self.classify_posts(path)
     classifier.fetch_and_classify path
   end
+
+  def trained_classifier!
+    NBayesClassifier.trained? ? classifier : train_classifier
+  end
 end
